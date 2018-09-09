@@ -10,4 +10,4 @@
 	<li>классы для выранивания текста: text-center, text-left, text-right.</li>
 </ul>
 
-<p>Работа вышеупомянутых классов продемонстрированна в файле index.html</a></p>
+<p>Работа вышеупомянутых классов продемонстрированна <a href="https://neverhood671.github.io/html-framework-mishunina.github.io/index.html">здесь</a></p>
