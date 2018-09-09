@@ -1,0 +1,14 @@
+.clearfix::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.pull-left {
+  float: left !important;
+}
+
+.pull-right {
+   margin-left: auto;
+   order: 2;
+}

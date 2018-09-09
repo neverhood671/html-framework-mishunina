@@ -1,0 +1,51 @@
+.margin-8 {
+    margin: 8px !important;
+}
+
+.margin-16 {
+    margin: 16px !important;
+}
+
+.margin-32 {
+    margin: 16px !important;
+}
+
+.margin-40 {
+    margin: 40px !important;
+}
+
+.margin-48 {
+    margin: 48px !important;
+}
+
+.padding-8 {
+    padding: 8px !important;
+}
+
+.padding-16 {
+    padding: 16px !important;
+}
+
+.padding-32 {
+    padding: 32px !important;
+}
+
+.padding-40 {
+    padding: 40px !important;
+}
+
+.padding-48 {
+    padding: 48px !important;
+}
+
+.text-center {
+	text-align: center !important;;
+}
+
+.text-left {
+	text-align: left !important;;
+}
+
+.text-right {
+	text-align: right !important;;
+}
