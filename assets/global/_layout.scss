@@ -1,0 +1,25 @@
+$values: (8, 16, 32, 40, 48);
+$params: (margin, padding);
+
+@each $param in $params {
+    @each $value in $values {
+        .#{$param}-#{$value} {
+            #{$param}: #{$value}px !important;
+        }
+    }
+}
+
+.clearfix::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.pull-left {
+  float: left !important;
+}
+
+.pull-right {
+   margin-left: auto;
+   order: 2;
+}

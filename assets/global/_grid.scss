@@ -1,0 +1,66 @@
+$col-size-values: ( sm: 768px, md: 992px, lg: 1200px);
+$col-num: 12;
+$col-width: 100% / $col-num;
+
+html {
+    box-sizing: border-box;
+    -ms-overflow-style: scrollbar;
+}
+
+*,
+*::after {
+    box-sizing: inherit;
+}
+
+
+
+@mixin container($min-width, $max-width) {
+    @media (min-width: $min-width) {
+        & {
+            max-width: $max-width;
+        }
+    }
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    @include container(720px, 768px);
+    @include container(960px, 992px);
+    @include container(1140px, 1200px);
+}
+
+.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+
+@each $col-size-name, $col-size-value in $col-size-values {
+    @for $i from 1 through $col-num {
+        .col-#{$col-size-name}-#{$i} {
+            position: relative;
+            width: 100%;
+            min-height: 1px;
+            padding-right: 15px;
+            padding-left: 15px;
+
+            @media (min-width: $col-size-value) {
+                & {
+                    -webkit-box-flex: 0;
+                    -ms-flex: 0 0 #{$i*$col-width};
+                    flex: 0 0 #{$i*$col-width};
+                    max-width: #{$i*$col-width};
+                }
+            }
+        }
+    }
+}

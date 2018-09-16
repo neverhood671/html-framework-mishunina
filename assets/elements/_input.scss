@@ -1,0 +1,41 @@
+input {
+    height: 2em;
+    border-radius: 5px;
+    border: 1px solid #7f7676;
+    color: #7f7676;
+    padding: 0 10px;
+    background: white;
+    width: 200px;
+
+
+    &:disabled {
+        background: #e2dede;
+    }
+    &:focus {
+        color: black;
+        border: 2px solid black;
+        outline: none;
+    }
+
+    &:read-only {
+        &:focus {
+            border: 1px solid #7f7676;
+            color: #7f7676;
+        }
+    }
+
+    &:invalid {
+        background: rgba(255, 0, 0, 0.1);
+        border: 2px solid rgba(255, 0, 0, 0.3)
+    }
+
+    &.sun_icon {
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHRpdGxlPmljb25fc3VuXzI8L3RpdGxlPgo8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTExNDAgLTI1MCkiPgo8cmVjdCB3aWR0aD0iMTM2NiIgaGVpZ2h0PSI3NjgiIGZpbGw9Im5vbmUiPjwvcmVjdD4KPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNjk2IDE5NikiPgo8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0MzAgNDApIj4KPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTQgMTQpIj4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiBmaWxsLXJ1bGU9Im5vbnplcm8iPjwvcmVjdD4KPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMSAxKSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjIiPgo8Y2lyY2xlIGN4PSIxMSIgY3k9IjExIiByPSI1IiBzdHJva2U9IiNGNUE2MjMiPjwvY2lyY2xlPgo8cGF0aCBkPSJtMTEgMHYyIiBzdHJva2U9IiNGRkQ5M0UiPjwvcGF0aD4KPHBhdGggZD0ibTExIDIwdjIiIHN0cm9rZT0iI0ZGRDkzRSI+PC9wYXRoPgo8cGF0aCBkPSJtMy4yMiAzLjIybDEuNDIgMS40MiIgc3Ryb2tlPSIjRkZEOTNFIj48L3BhdGg+CjxwYXRoIGQ9Im0xNy4zNiAxNy4zNmwxLjQyIDEuNDIiIHN0cm9rZT0iI0ZGRDkzRSI+PC9wYXRoPgo8cGF0aCBkPSJtMCAxMWgyIiBzdHJva2U9IiNGRkQ5M0UiPjwvcGF0aD4KPHBhdGggZD0ibTIwIDExaDIiIHN0cm9rZT0iI0ZGRDkzRSI+PC9wYXRoPgo8cGF0aCBkPSJtMy4yMiAxOC43OGwxLjQyLTEuNDIiIHN0cm9rZT0iI0ZGRDkzRSI+PC9wYXRoPgo8cGF0aCBkPSJtMTcuMzYgNC42NGwxLjQyLTEuNDIiIHN0cm9rZT0iI0ZGRDkzRSI+PC9wYXRoPgo8L2c+CjwvZz4KPC9nPgo8L2c+CjwvZz4KPC9nPgo8L3N2Zz4=");
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: contain;
+        padding-left: 40px;
+    }
+}
+
+

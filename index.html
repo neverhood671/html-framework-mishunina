@@ -2,180 +2,139 @@
 <html lang="ru">
 
 <head>
-    <title>Epam JS Training. Homework 1.</title>
+    <title>Epam JS Training. Homework - SCSS Framework.</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/flex.css">
-    <link rel="stylesheet" href="css/float.css">
-    <link rel="stylesheet" href="css/grid.css">
-    <link rel="stylesheet" href="css/alignment.css">
-    <style>
-    body {
-        font-family: arial;
-    }
-
-    header {
-        text-align: center;
-        font-size: 20px;
-        font-weight: bold
-    }
-
-    .link {
-        display: inline-block;
-        margin: 10px;
-    }
-
-    .article {
-        height: 100vh;
-    }
-
-    .box {
-        height: 50px;
-        width: 50px;
-        border: 1px solid black;
-    }
-
-    .big-box {
-        height: 100px;
-        width: 300px;
-    }
-
-    .red {
-        background: red;
-    }
-
-    .green {
-        background: green;
-    }
-
-    .blue {
-        background: blue;
-    }
-
-    .wrapper {
-        border: 2px solid black;
-    }
-
-    .text-wrapper {
-        width: min-content;
-    }
-
-    .example-row {
-        margin-bottom: 20px;
-    }
-    </style>
-    <script type="text/javascript">
-    function changeFlexType(e) {
-        var flexWrapper = document.querySelector("#flexWrapper");
-        flexWrapper.classList.remove("flex-row");
-        flexWrapper.classList.remove("flex-column");
-        flexWrapper.classList.add(e.value);
-    }
-
-    function changeXJustification(e) {
-        var flexWrapper = document.querySelector("#flexWrapper");
-        flexWrapper.classList.remove("x-start");
-        flexWrapper.classList.remove("x-end");
-        flexWrapper.classList.remove("space-between");
-        flexWrapper.classList.add(e.value);
-    }
-
-    function removeClassByPrefix(el, prefix) {
-        var regx = new RegExp('\\b' + prefix + '.*?\\b', 'g');
-        el.className = el.className.replace(regx, '');
-        return el;
-    }
-
-    function changeMargin(e) {
-        var textBoxWrapper = document.querySelector("#textBoxWrapper");
-        removeClassByPrefix(textBoxWrapper, 'margin');
-        textBoxWrapper.classList.add(e.options[e.selectedIndex].value);
-    }
-
-    function changePadding(e) {
-        var textBoxWrapper = document.querySelector("#textBoxWrapper");
-        removeClassByPrefix(textBoxWrapper, 'padding');
-        textBoxWrapper.classList.add(e.options[e.selectedIndex].value);
-    }
-
-    function changeTextAlign(e) {
-        var textBoxWrapper = document.querySelector("#textBoxWrapper");
-        removeClassByPrefix(textBoxWrapper, 'text');
-        textBoxWrapper.classList.add(e.options[e.selectedIndex].value);
-    }
-    </script>
+    <link rel="stylesheet" href="assets/index.css">
 </head>
 
 <body>
-    <header>Demonstration of Framework Working</header>
-    <main class="text-center">
-        <article class="article" id="grid">
-            <h2>Grid and Float</h2>
-            <p>Try to change width of your browser window.</p>
+    <main>
+        <form id="personal_info" class="margin-16 padding-16">
             <div class="container">
-                <div class="row example-row">
-                    <div class="col-lg-4 col-md-12 col-sm-12 box red"></div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 box green"></div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 box blue"></div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <h2>Framework Demonstration Form<h2>
+                    </div>
                 </div>
-                <div class="row clearfix example-row">
-                    <div class="col-lg-4 col-md-2 col-sm-1 pull-left box red"></div>
-                    <div class="col-lg-4 col-md-2 col-sm-1 pull-right box green"></div>
+
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <div class="clearfix">
+                            <div class="pull-left">
+                                <label for="input3">Input 4 </label>
+                                <input  type="number" id="input3" placeholder="Simple">
+                            </div>
+                            <div class="pull-left">
+                                <label for="input1">Input 1 </label>
+                                <input type="text" id="input1" placeholder="Required" required>
+                            </div>
+                            <div class="pull-left">
+                                <label for="input2">Input 2 </label>
+                                <input type="text" id="input2" placeholder="Readonly" readonly>
+                            </div>
+                            <div class="pull-left">
+                                <label for="input3">Input 3 </label>
+                                <input type="text" id="input3" placeholder="Disabled" disabled>
+                            </div>
+                            <div class="pull-left">
+                                <label for="input3">Input 4 </label>
+                                <input class="sun_icon" type="text" id="input3" placeholder="With Icon">
+                            </div>
+                              
+                        </div> 
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                       <div>
+                            <div class="flex space-between">
+                                <input type="radio" id="radio1" value="radio1" name="radio" checked>
+                                <label for="radio1">Radio 1</label>
+
+                                <input type="radio" id="radio2" value="radio2" name="radio">
+                                <label for="radio2">Radio 2 </label>
+
+                                <input type="radio" id="radio3" value="radio3" name="radio" disabled>
+                                <label for="radio3">Radio 3 </label>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex space-between">
+                                <input type="checkbox" id="checkbox1" value="checkbox1" checked>
+                                <label for="checkbox1">Checkbox 1</label>
+
+                                <input type="checkbox" id="checkbox2" value="checkbox2">
+                                <label for="checkbox2">Checkbox 2</label>
+
+                                <input type="checkbox" id="checkbox3" value="checkbox3" disabled>
+                                <label for="checkbox3">Checkbox 3</label>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-            </div>
-            <a class="link prev" href="#justification ">
-                < prev </a>
-                    <a class="link next" href="#flex">next ></a>
-        </article>
-        <article class="article" id="flex">
-            <h2>Flex</h2>
-            <div id="selectFlexType">
-                <input name="flexType" type="radio" value="flex-row" onclick="changeFlexType(this);" checked> flex-row
-                <input name="flexType" type="radio" value="flex-column" onclick="changeFlexType(this);"> flex-column
-            </div>
-            <div id="selectXJustification">
-                <input name="xJustification" type="radio" value="x-start" onclick="changeXJustification(this);" checked> x-start
-                <input name="xJustification" type="radio" value="x-end" onclick="changeXJustification(this);"> x-end
-                <input name="xJustification" type="radio" value="space-between" onclick="changeXJustification(this);" checked> space-between
-            </div>
-            <div class="flex flex-row x-start wrapper padding-16 margin-16" id="flexWrapper">
-                <div class="box red"></div>
-                <div class="box green"></div>
-                <div class="box blue"></div>
-            </div>
-            <a class="link prev" href="#grid ">
-                < prev </a>
-                    <a class="link next" href="#justification">next ></a>
-        </article>
-        <article class="article" id="justification">
-            <h2>Elements and Text justification</h2>
-            <select id="marginSelector" onchange="changeMargin(this)">
-                <option value="margin-8" selected>margin-8</option>
-                <option value="margin-16">margin-16</option>
-                <option value="margin-32">margin-32</option>
-                <option value="margin-40">margin-40</option>
-                <option value="margin-48">margin-48</option>
-            </select>
-            <select id="paddingSelector" onchange="changePadding(this)">
-                <option value="padding-8" selected>padding-8</option>
-                <option value="padding-16">padding-16</option>
-                <option value="padding-32">padding-32</option>
-                <option value="padding-40">padding-40</option>
-                <option value="padding-48">padding-48</option>
-            </select>
-            <select id="textAlignSelector" onchange="changeTextAlign(this)">
-                <option value="text-center" selected>text-center</option>
-                <option value="text-left">text-left</option>
-                <option value="text-right">text-right</option>
-            </select>
-            <div class="flex x-center">
-                <div class="flex wrapper text-wrapper margin-8 padding-8">
-                    <div id="textBoxWrapper" class="box big-box margin-8 padding-8 text-center">Some Text</div>
+
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                       <div>
+                            <div>Textarea 1</div>
+                            <textarea disabled placeholder="Disabled textarea"></textarea>
+                        </div>
+                    </div>
+
+                     <div class="col-sm-12 col-md-6 col-lg-6">
+                        <div>
+                            <div>Textarea 2</div>
+                            <textarea readonly placeholder="Read only textarea"></textarea>
+                        </div>
+                    </div>
                 </div>
+
+                 <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                       <div>
+                            <div>Textarea 3</div>
+                            <textarea placeholder="Simple"></textarea>
+                        </div>
+                    </div>
+
+                     <div class="col-sm-12 col-md-6 col-lg-6">
+                        <div>
+                            <div>Textarea 4</div>
+                            <textarea placeholder="Required"required></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-md-12">
+                        <div class="flex x-center">
+                            <button class="primary big margin-8" >Big Primary Btn</button>
+                            <button class="secondary big  margin-8" >Big Secondary Btn</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-md-12">
+                        <div class="flex x-center">
+                            <button class="primary  margin-8" >Normal Primary Btn</button>
+                            <button class="secondary  margin-8" >Normal Secondary Btn</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-md-12">
+                        <div class="flex x-center">
+                            <button class="primary small margin-8" >Small Primary Btn</button>
+                            <button class="secondary small  margin-8" >Small Secondary Btn</button>
+                        </div>
+                    </div>
+                </div>
+               
             </div>
-            <a class="link prev" href="#flex ">
-                < prev </a>
-                    <a class="link next" href="#grid">next ></a>
-        </article>
+           
+        </form>
     </main>
 </body>
 

@@ -1,0 +1,54 @@
+input[type=radio] {
+
+    display: none;
+
+    &+label {
+        
+        &:before {
+            content: "";
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            margin-right: 10px;
+            position: absolute;
+            left: 0;
+            bottom: 1px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+        }
+    }
+
+    &:checked {
+        &+label:before {
+            content: "\2022";
+            color: rgba(0, 0, 0, 0.5);
+            font-size: 30px;
+            text-align: center;
+            line-height: 18px;
+        }
+    }
+
+
+    &:disabled {
+        &+label {
+            color: gray;
+        }
+        &+label:before {
+            color: gray;
+            background: rgba(0, 0, 0, 0.1);
+            border-color: rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    &:invalid {
+        &+label {
+            color: red;
+        }
+        &+label:before {
+            color: red;
+            background: rgba(255, 0, 0, 0.2);
+            border-color: rgba(255, 0, 0, 0.5);
+        }
+    }
+}

@@ -1,0 +1,55 @@
+$justify-values: (start, center, end);
+$direction-values: (row, column);
+
+@mixin justify($property) {
+    -webkit-box-pack: $property !important;
+    -ms-flex-pack: $property !important;
+    @if $property=='start' or $property=='end' {
+        justify-content: flex-#{$property} !important;
+    } @else {
+        justify-content: $property !important;
+    }
+}
+
+
+@each $value in $justify-values {
+    .x-#{$value} {
+         @include justify($value);
+    }
+}
+
+@mixin direction($property) {
+	@if $property=='row'{
+        -webkit-box-orient: horizontal !important;
+    } @else if $property=='column' {
+        -webkit-box-orient: vertical !important;
+    }
+    -webkit-box-direction: normal !important;
+    -ms-flex-direction: $property !important;
+    flex-direction: $property !important;
+}
+
+@each $value in $direction-values {
+    .flex-#{$value} {
+         @include direction($value);
+    }
+}
+
+.flex {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.space-between {
+  -webkit-box-pack: justify !important;
+  -ms-flex-pack: justify !important;
+  justify-content: space-between !important;
+}
+
+
+.y-center {
+  -webkit-box-align: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important;
+}

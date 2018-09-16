@@ -1,0 +1,13 @@
+form {
+	display: block;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: arial;
+    max-width: 1200px;
+
+    p, div {
+    	padding-top: 10px;
+    	padding-bottom: 10px;
+    }
+}
